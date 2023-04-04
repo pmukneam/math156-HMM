@@ -39,6 +39,9 @@ pat = r'\b(?:{})\b'.format('|'.join(stopwords))
 steam_review['review_text'] = steam_review['review_text'].str.replace(pat, '', regex = True)
 steam_review['review_text'] = steam_review['review_text'].str.replace(r'\s+', ' ', regex = True)
 
+# Removing special char
+steam_review['review_text'] = steam_review['review_text'].str.replace(pattern, ' ', regex =  True)
+
 steam_review.to_csv("data/steam_review_10k.csv")
 steam_review.head(1000).to_csv("data/steam_review_1k.csv")
 steam_review.head(100).to_csv("data/steam_review_100.csv")

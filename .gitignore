@@ -1,1 +1,4 @@
 data/dataset.csv
+todo
+src/tmp*
+data/steam_review_tmp*
